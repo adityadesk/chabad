@@ -1,0 +1,155 @@
+
+@media (min-width:1121px){
+	.nav-toggle, .mobile-navigation{
+		display: none;
+	}
+}
+@media (min-width:1200px){
+	.offset-xl-1 {
+	    margin-left: 0;
+	    margin-right: 8.33333%;
+	}
+}
+
+@media (max-width:1120px){
+
+	.nav-toggle{
+		display: block;
+		position: relative;
+		width: 37px;
+		height: 34px;
+		cursor: pointer;
+		padding: 10px;
+		z-index: 10000;
+		> span{
+			width: 17px;
+			height: 2px;
+			background: #fff;
+			border-radius: 3px;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			transition: all 0.3s ease;
+
+			&:nth-child(2){
+				top: 16px;
+			}
+			&:nth-child(3){
+				top: 22px;
+			}
+		}
+		&.open{
+			span{
+				background: #8B1437;
+				&:nth-child(1){
+					transform: rotate(45deg);
+					top: 15px;
+				}
+				&:nth-child(2){
+					opacity: 0;
+				}
+				&:nth-child(3){
+					transform: rotate(-45deg);
+					top: 15px;
+				}
+			}
+		}
+	}
+	.nav-open{
+		height: 100%;
+		overflow: hidden;
+	}
+	.mobile-navigation{
+		display: block;
+		position: fixed;
+		right: 0;
+		top: 0;
+		padding: 100px 0 20px;
+		background: #fff;
+		box-shadow: 0 2px 8px rgba(#000, 0.5);
+		height: 100%;
+		width: 290px;
+		transform: translateX(100%);
+		transition: all 0.3s ease;
+		z-index: 1000;		
+		.rtl &{
+			left: 0;
+			right: auto;
+			transform: translateX(-100%);
+		}
+		.nav-open &{
+			transform: none;
+		}
+		&-in{
+			height: 100%;
+			overflow: auto;
+		}
+		.menu{
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			
+
+			ul{
+				
+				a{
+					padding-right: 50px;
+					font-weight: 700;
+				}
+			}
+			a{
+				display: block;
+				padding: 10px 20px;
+				border-bottom: 1px solid #8B1437;
+				font-size: 16px;
+				color: #8B1437;
+				font-weight: 800;
+				&:hover, &:focus{
+					color: $linkColor;
+				}
+			}
+			li.menu-item-has-children{
+				>a{
+					position: relative;
+					padding-right: 30px;
+					/* &::before{
+						content: "";
+						background: url(../images/drop-arrow.svg) no-repeat;
+						width: 18px;
+						height: 10px;						
+						position: absolute;
+						right: 0;
+						top: calc(50% - 5px);
+						transform: rotate(-90deg);
+						transition: all 0.3s ease;						
+					} */
+					&.on{
+						&::before{
+							transform: none;
+						}
+						
+					}
+				}
+			}
+			li.btn-style{
+				padding-top: 10px;
+				padding-right: 20px;
+				padding-left: 20px;
+				a{
+					display: inline-block;
+					padding: 10px 20px;
+		            border-radius: 6px;
+		            color: #fff;
+		            background: #f47722;
+		            border: none;
+				}
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,40 @@
+{
+  "name": "chabad",
+  "version": "1.0.0",
+  "description": "Chabad",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "gulp",
+    "watch": "cross-env NODE_ENV=development gulp watch",
+    "eslint": "cross-env ./node_modules/.bin/eslint .",
+    "build": "cross-env NODE_ENV=production gulp build"
+  },
+  "author": "chabad",
+  "license": "MIT",
+  "homepage": "https://chabad.ae/",
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^3.0.0",
+    "browser-sync": "^2.24.4",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.4.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-xss": "^0.1.9",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-sort": "^2.0.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-wp-pot": "^2.3.5",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1"
+  }
+}
